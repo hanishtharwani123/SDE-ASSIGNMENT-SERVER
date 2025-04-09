@@ -20,6 +20,7 @@ const corsOptions = {
   origin: [
     "https://sde-assignment-client.onrender.com",
     "https://sde-assignment-client.vercel.app",
+    "https://sde-assignment-client-er2s2c5m9-hanishtharwani123s-projects.vercel.app",
     "http://localhost:3000" // Optional: for local development
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
