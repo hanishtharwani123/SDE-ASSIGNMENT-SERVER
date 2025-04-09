@@ -15,8 +15,16 @@ const redirectRoutes = require("./routes/redirect.routes");
 // Create Express app
 const app = express();
 
+// Configure CORS
+const corsOptions = {
+  origin: "https://sde-assignment-client.onrender.com", // Allow only your frontend domain
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Allowed HTTP methods
+  allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
+  credentials: true, // If you need to send cookies or auth headers
+};
+app.use(cors(corsOptions));
+
 // Middleware
-app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
