@@ -17,10 +17,14 @@ const app = express();
 
 // Configure CORS
 const corsOptions = {
-  origin: "https://sde-assignment-client.onrender.com", // Allow only your frontend domain
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Allowed HTTP methods
-  allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
-  credentials: true, // If you need to send cookies or auth headers
+  origin: [
+    "https://sde-assignment-client.onrender.com",
+    "https://sde-assignment-client-mt9ksp1jj-hanishtharwani123s-projects.vercel.app",
+    "http://localhost:3000" // Optional: for local development
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
 };
 app.use(cors(corsOptions));
 
